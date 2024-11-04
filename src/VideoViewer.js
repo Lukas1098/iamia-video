@@ -20,8 +20,9 @@ const VideoViewer = () => {
       height: '100vh',
       width: '100%',
       overflow: 'hidden',
-      transition: 'opacity 2s ease', // Transición de 2 segundos
-      opacity: isVisible ? 1 : 0 // Control de opacidad
+      transition: 'opacity 2s ease',
+      opacity: isVisible ? 1 : 0,
+      backgroundColor: 'transparent' // Asegura que el fondo sea transparente
     }}>
       <video 
         controls 
@@ -29,7 +30,8 @@ const VideoViewer = () => {
           width: '100%',
           height: 'auto',
           maxHeight: '100%',
-          objectFit: 'cover'
+          objectFit: 'cover',
+          backgroundColor: 'transparent' // Asegura que el video también sea transparente
         }}
       >
         <source src={`${process.env.PUBLIC_URL}/video.mp4`} type="video/mp4" />
